@@ -1,0 +1,12 @@
+services:
+  web:
+    container_name: SGAEM_FE
+    env_file:
+      - .env.local
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    restart: always
+    ports:
+      - '3000:3000'
