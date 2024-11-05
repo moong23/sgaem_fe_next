@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "SGAEM Website",
-  description: "Welcome to SGAEM",
+  description: "SoGang Association of E-sports Management",
 };
 
 export default function RootLayout({
@@ -12,8 +13,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body className="antialised">{children}</body>
+    <html
+      lang="ko"
+      // className="dark"
+    >
+      <body className="antialised">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
